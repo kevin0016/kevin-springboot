@@ -17,6 +17,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
  */
 @Configuration
 public class WebFluxConfiguration {
+
     @Bean
     public RouterFunction<ServerResponse> saveUser(UserHandler userHandler) {
         return route(POST("/web/flux/user/save"), userHandler::save);
