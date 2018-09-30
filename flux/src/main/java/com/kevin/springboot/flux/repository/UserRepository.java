@@ -2,6 +2,7 @@ package com.kevin.springboot.flux.repository;
 
 import com.kevin.springboot.flux.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -18,14 +19,20 @@ import java.util.Collections;
 @Repository
 public class UserRepository {
     private final DataSource dataSource;
+    private final DataSource masterDataSource;
+    private final DataSource salveDataSource;
 
-    @Autowired
-    public UserRepository(DataSource dataSource) {
+
+    public UserRepository(DataSource dataSource,
+                          @Qualifier("masterDataSource") DataSource masterDataSource,
+                          @Qualifier("salveDataSource")DataSource salveDataSource) {
         this.dataSource = dataSource;
+        this.masterDataSource = masterDataSource;
+        this.salveDataSource = salveDataSource;
     }
 
     public boolean save(User user) {
-        System.out.println("save user" + user);
+        System.out.printf("[Thread:%s] [save user:%s]\n" ,Thread.currentThread().getName(),user);
         return true;
     }
 

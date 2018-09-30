@@ -22,6 +22,7 @@ public class UserHandler {
     }
 
     public Mono<ServerResponse> save(ServerRequest serverRequest) {
+        System.out.printf("[Thread:%s] start saving user...\n" ,Thread.currentThread().getName());
         //在spring WEB MVC中使用@RequestBody
         //在spring WEB FLUX中使用serverRequest
         Mono<User> userMono = serverRequest.bodyToMono(User.class);
