@@ -1,0 +1,14 @@
+*~
+.classpath
+.project
+target
+.settings
+.DS_Store
+.faces-config.xml.jsfdia
+MANIFEST.MF
+.idea
+*.iml
+src/main/webapp/WEB-INF/*-ds.xml
+cucumber.log
+/.apt_generated/
+.tern-project
