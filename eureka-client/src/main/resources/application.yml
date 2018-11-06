@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hello-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+#    register-with-eureka: false
+#    fetch-registry: false
+server:
+  port: 8001
