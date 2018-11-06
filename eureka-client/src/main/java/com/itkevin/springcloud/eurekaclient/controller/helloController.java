@@ -30,8 +30,13 @@ public class helloController {
     DiscoveryClient client;
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String index(){
-        List<ServiceInstance> instances = client.getInstances("localhost");
-        logger.info("host is"+instances);
+        try {
+            List<ServiceInstance> instances = client.getInstances("localhost");
+            Thread.sleep(10000);
+            logger.info("host is"+instances);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return "hello world";
     }
 

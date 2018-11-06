@@ -1,5 +1,6 @@
 package com.itkevin.springcloud.consumer.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -22,10 +23,15 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Autowired
     RestTemplate restTemplate;
 
+    @HystrixCommand(fallbackMethod = "helloFallback")
     @Override
     public String getstr() {
         String url = "http://hello-service/hello";
         ResponseEntity<String> forEntity = restTemplate.getForEntity(url, String.class);
         return forEntity.getBody();
+    }
+
+    public String helloFallback(){
+        return "error";
     }
 }
