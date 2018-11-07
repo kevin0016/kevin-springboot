@@ -6,6 +6,7 @@ import com.sun.istack.internal.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,16 +35,17 @@ public class helloController {
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index() {
         try {
+            logger.info("get " );
             List<ServiceInstance> instances = client.getInstances("localhost");
-//            Thread.sleep(10000);
+            Thread.sleep(10000);
             logger.info("host is" + instances);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "hello world";
     }
-    @RequestMapping(value = "/getPerson", method = RequestMethod.GET)
-    public Person getPerson() {
+    @RequestMapping(value = "/getPerson", method = RequestMethod.POST)
+    public Person getPerson(@RequestBody Person person) {
         try {
             List<ServiceInstance> instances = client.getInstances("localhost");
 //            Thread.sleep(10000);
@@ -51,9 +53,9 @@ public class helloController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Person person = new Person();
         person.setName("kevin");
         person.setAge(18);
+        logger.info("person is: "+JsonHelper.toJson(person));
         return person;
     }
 

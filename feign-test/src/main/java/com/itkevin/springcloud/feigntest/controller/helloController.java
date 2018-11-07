@@ -1,11 +1,10 @@
 package com.itkevin.springcloud.feigntest.controller;
 
 import com.itkevin.springcloud.feigntest.service.HelloService;
+import com.itkevin.springcloud.po.Person;
 import com.itkevin.springcloud.utils.JsonHelper;
-import com.netflix.discovery.converters.Auto;
 import com.sun.istack.internal.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,9 +37,9 @@ public class helloController {
 
         return helloService.hello();
     }
-    @RequestMapping(value = "/feign-consumer-getPerson",method = RequestMethod.GET)
-    public String getPerson(){
-        return JsonHelper.toJson(helloService.getPerson());
+    @RequestMapping(value = "/feign-consumer-getPerson",method = RequestMethod.POST)
+    public String getPerson(Person person){
+        return JsonHelper.toJson(helloService.getPerson(person));
     }
 
 }

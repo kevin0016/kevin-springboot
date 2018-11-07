@@ -7,3 +7,14 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
+feign:
+  hystrix:
+    enabled: true
+#ribbon:
+#  ConnectTimeout: 500
+#  ReadTimeout: 500
+#
+#hello-service:
+#  ribbon:
+#    ConnectTimeout: 500
+#    ReadTimeout: 500
