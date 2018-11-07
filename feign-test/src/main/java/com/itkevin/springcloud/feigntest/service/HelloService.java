@@ -1,5 +1,6 @@
 package com.itkevin.springcloud.feigntest.service;
 
+import com.itkevin.springcloud.po.Person;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,4 +21,6 @@ public interface HelloService {
 
     @RequestMapping("/hello")
     String hello();
+    @RequestMapping("/getPerson")
+    Person getPerson();
 }

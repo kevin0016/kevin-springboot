@@ -1,5 +1,7 @@
 package com.itkevin.springcloud.eurekaclient.controller;
 
+import com.itkevin.springcloud.po.Person;
+import com.itkevin.springcloud.utils.JsonHelper;
 import com.sun.istack.internal.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -28,16 +30,31 @@ public class helloController {
     private final Logger logger = Logger.getLogger(getClass());
     @Autowired
     DiscoveryClient client;
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String index(){
+
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String index() {
         try {
             List<ServiceInstance> instances = client.getInstances("localhost");
-            Thread.sleep(10000);
-            logger.info("host is"+instances);
-        }catch (Exception e){
+//            Thread.sleep(10000);
+            logger.info("host is" + instances);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return "hello world";
+    }
+    @RequestMapping(value = "/getPerson", method = RequestMethod.GET)
+    public Person getPerson() {
+        try {
+            List<ServiceInstance> instances = client.getInstances("localhost");
+//            Thread.sleep(10000);
+            logger.info("host is" + instances);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Person person = new Person();
+        person.setName("kevin");
+        person.setAge(18);
+        return person;
     }
 
 }
