@@ -11,6 +11,7 @@
         <module name="eureka-service" />
         <module name="feign-test" />
         <module name="flux" />
+        <module name="zuul-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
       <module name="parent" target="1.8" />
       <module name="springcloud_eureka" target="1.8" />
       <module name="springcloudeurekaservice" target="1.8" />
+      <module name="zuul-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

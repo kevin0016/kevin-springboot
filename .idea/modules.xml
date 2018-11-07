@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/flux/flux.iml" filepath="$PROJECT_DIR$/flux/flux.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/kevin-springboot.iml" filepath="$PROJECT_DIR$/.idea/kevin-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-test/zuul-test.iml" filepath="$PROJECT_DIR$/zuul-test/zuul-test.iml" />
     </modules>
   </component>
 </project>
