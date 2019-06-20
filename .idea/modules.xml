@@ -3,12 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/consumer/consumer.iml" filepath="$PROJECT_DIR$/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/eureka-server.iml" filepath="$PROJECT_DIR$/server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/feign-test/feign-test.iml" filepath="$PROJECT_DIR$/feign-test/feign-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign-test/feigntest.iml" filepath="$PROJECT_DIR$/feign-test/feigntest.iml" />
       <module fileurl="file://$PROJECT_DIR$/flux/flux.iml" filepath="$PROJECT_DIR$/flux/flux.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/kevin-springboot.iml" filepath="$PROJECT_DIR$/.idea/kevin-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-test/zuul-test.iml" filepath="$PROJECT_DIR$/zuul-test/zuul-test.iml" />
     </modules>
   </component>

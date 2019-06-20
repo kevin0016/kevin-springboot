@@ -9,3 +9,6 @@ eureka:
 #    fetch-registry: false
 server:
   port: 8001
+#management:
+#  security:
+#    enabled: false

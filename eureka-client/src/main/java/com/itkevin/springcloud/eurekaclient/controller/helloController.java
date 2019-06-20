@@ -36,8 +36,8 @@ public class helloController {
     public String index() {
         try {
             logger.info("get " );
-            List<ServiceInstance> instances = client.getInstances("localhost");
-            Thread.sleep(10000);
+            List<ServiceInstance> instances = client.getInstances("host");
+//            Thread.sleep(10000);
             logger.info("host is" + instances);
         } catch (Exception e) {
             e.printStackTrace();

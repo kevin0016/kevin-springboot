@@ -7,24 +7,40 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="consumer" />
+        <module name="eureka-client" />
         <module name="eureka-server" />
         <module name="eureka-service" />
         <module name="feign-test" />
+        <module name="feigntest" />
         <module name="flux" />
+        <module name="server" />
         <module name="zuul-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="eureka-client" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="eureka-service" target="1.8" />
       <module name="feign-test" target="1.8" />
+      <module name="feigntest" target="1.8" />
       <module name="flux" target="1.8" />
       <module name="parent" target="1.8" />
+      <module name="server" target="1.8" />
       <module name="springcloud_eureka" target="1.8" />
       <module name="springcloudeurekaservice" target="1.8" />
       <module name="zuul-test" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="consumer" options="-parameters" />
+      <module name="eureka-client" options="-parameters" />
+      <module name="feigntest" options="-parameters" />
+      <module name="flux" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="zuul-test" options="-parameters" />
+    </option>
   </component>
 </project>
