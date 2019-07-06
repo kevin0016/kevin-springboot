@@ -156,7 +156,7 @@ public class DateUtil {
 	 * @return HH:MM:SS
 	 */
 	public static String getAfterDateTime(int hour, String format) {
-		long lTime = new Date().getTime() + hour * 60 * 60 * 1000;
+		long lTime = System.currentTimeMillis() + hour * 60 * 60 * 1000;
 		Calendar calendar = new GregorianCalendar();
 		Date date_now = new Date(lTime);
 		calendar.setTime(date_now);
@@ -174,7 +174,7 @@ public class DateUtil {
 	 * @return HH:MM:SS
 	 */
 	public static String getAfterDateDay(int day, String format) {
-		long lTime = new Date().getTime() + day * 24 * 60 * 60 * 1000;
+		long lTime = System.currentTimeMillis() + day * 24 * 60 * 60 * 1000;
 		Calendar calendar = new GregorianCalendar();
 		Date date_now = new Date(lTime);
 		calendar.setTime(date_now);
@@ -268,8 +268,9 @@ public class DateUtil {
 	 * @author kevin
 	 */
 	public static String changeFormatDateString(String format1, String format2, String strDate) {
-		if(strDate == null)
-			return "";
+		if(strDate == null) {
+            return "";
+        }
 		if(strDate.length() >= format1.length() && format1.length() >= format2.length()) {
 			return parseDateToString(parseStringToDate(strDate, format1), format2);
 		}
@@ -511,9 +512,9 @@ public class DateUtil {
 		SimpleDateFormat fmt = new SimpleDateFormat(DATE_FORMAT_SHORT);
 		String strDate = fmt.format(date_now) + strTime;
 		SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT_FULL);
-		if(date_now.before(df.parse(strDate)))
-			p = (df.parse(strDate)).getTime() - l_date;
-		else {
+		if(date_now.before(df.parse(strDate))) {
+            p = (df.parse(strDate)).getTime() - l_date;
+        } else {
 			Calendar calendar = new GregorianCalendar();
 			calendar.setTime(date_now);
 			calendar.add(Calendar.DAY_OF_YEAR, 1);

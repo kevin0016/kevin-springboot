@@ -62,7 +62,9 @@ public class JsonHelper {
 	
 	@SuppressWarnings("unchecked")
 	public static <K, V> Map<K, V> toMap(String json) {
-		if(json == null || json.length() == 0) return new HashMap<K, V>();
+		if(json == null || json.length() == 0) {
+            return new HashMap<K, V>();
+        }
 		
 		try {
 			return objectMapper.readValue(json, Map.class);

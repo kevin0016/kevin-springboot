@@ -1,0 +1,5 @@
+# 相对于yml配置，properties优先级高
+server:
+  port: 9090
+  servlet:
+    context-path: /kevin
