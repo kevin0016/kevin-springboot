@@ -2,7 +2,7 @@
 server:
   port: 8080
   servlet:
-    context-path: /kevin
+    context-path: /
 
 # 这个配置尽量不要写到application配置表中
 person:
@@ -30,6 +30,13 @@ spring:
   output:
     ansi:
       enabled: always
+#配置管理平台
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8080"
+        instance:
+          prefer-ip: true
 
 
 # 加载所有的端点/默认只加载了 info / health
@@ -38,6 +45,7 @@ management:
     web:
       exposure:
         include: "*"
+      base-path: "/"
   endpoint:
     health:
       show-details: always
@@ -46,3 +54,5 @@ info:
   blog-url: "is kevin"
   author: "kevin"
   version: "@project.version@"
+
+
