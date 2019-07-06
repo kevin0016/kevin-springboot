@@ -1,0 +1,5 @@
+# 这个配置尽量不要写到application配置表中
+girl:
+  age: 22
+  name: Marry
+  marraied: true

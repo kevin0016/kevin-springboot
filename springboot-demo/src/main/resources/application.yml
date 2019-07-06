@@ -1,5 +1,48 @@
 # 相对于yml配置，properties优先级高
 server:
-  port: 9090
+  port: 8080
   servlet:
     context-path: /kevin
+
+# 这个配置尽量不要写到application配置表中
+person:
+  age: 25
+  name: kevin
+
+# 配置日志等级
+logging:
+#  pattern:
+#    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green}"
+  path: ./logs/
+  level:
+    root: info
+    org:
+      springframework:
+        web: debug
+  file:
+    max-history: 10
+    max-size: 10MB
+
+spring:
+  profiles:
+    active: dev
+# 配置控制台打印颜色
+  output:
+    ansi:
+      enabled: always
+
+
+# 加载所有的端点/默认只加载了 info / health
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+# 描述信息
+info:
+  blog-url: "is kevin"
+  author: "kevin"
+  version: "@project.version@"
