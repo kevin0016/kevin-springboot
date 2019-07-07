@@ -14,6 +14,7 @@
         <module name="feigntest" />
         <module name="flux" />
         <module name="server" />
+        <module name="springboot-demo" />
         <module name="zuul-test" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,7 @@
       <module name="flux" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="server" target="1.8" />
+      <module name="springboot-demo" target="1.8" />
       <module name="springcloud_eureka" target="1.8" />
       <module name="springcloudeurekaservice" target="1.8" />
       <module name="zuul-test" target="1.8" />
@@ -40,6 +42,7 @@
       <module name="feigntest" options="-parameters" />
       <module name="flux" options="-parameters" />
       <module name="server" options="-parameters" />
+      <module name="springboot-demo" options="-parameters" />
       <module name="zuul-test" options="-parameters" />
     </option>
   </component>

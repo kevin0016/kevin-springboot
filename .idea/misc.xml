@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/feign-test/pom.xml" />
         <option value="$PROJECT_DIR$/parent/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-test/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-demo/pom.xml" />
       </list>
     </option>
   </component>

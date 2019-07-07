@@ -1,15 +1,23 @@
 package com.itkevin.springbootdemo.component;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 
 /**
  * @author kevin
  */
 @Component
 @ConfigurationProperties(prefix = "person")
-public class Person1 {
+@ApiModel
+public class Person1 implements Serializable {
+
+    @ApiModelProperty("用户姓名")
     private String name;
+    @ApiModelProperty("用户年龄")
     private int age;
 
     @Override

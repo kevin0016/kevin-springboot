@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/kevin-springboot.iml" filepath="$PROJECT_DIR$/.idea/kevin-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-demo/springboot-demo.iml" filepath="$PROJECT_DIR$/springboot-demo/springboot-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-test/zuul-test.iml" filepath="$PROJECT_DIR$/zuul-test/zuul-test.iml" />
     </modules>
   </component>

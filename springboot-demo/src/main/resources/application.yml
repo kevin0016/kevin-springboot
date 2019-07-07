@@ -37,6 +37,10 @@ spring:
         url: "http://localhost:8080"
         instance:
           prefer-ip: true
+# swgger扫描包路径
+  swagger:
+    base-package: "com.itkevin"
+    enabled: true
 
 
 # 加载所有的端点/默认只加载了 info / health
