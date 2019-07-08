@@ -11,8 +11,6 @@ public class HelloController {
 
     @GetMapping(value = "hello")
     public String hello(){
-        if(1==1)
-            System.out.println(2);
         return "hello world";
     }
 }
