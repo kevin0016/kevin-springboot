@@ -11,8 +11,8 @@ person:
 
 # 配置日志等级
 logging:
-#  pattern:
-#    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green}"
+  #  pattern:
+  #    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green}"
   path: ./logs/
   level:
     root: info
@@ -26,22 +26,21 @@ logging:
 spring:
   profiles:
     active: dev
-# 配置控制台打印颜色
+  # 配置控制台打印颜色
   output:
     ansi:
       enabled: always
-#配置管理平台
+  #配置管理平台
   boot:
     admin:
       client:
         url: "http://localhost:8080"
         instance:
           prefer-ip: true
-# swgger扫描包路径
+  # swgger扫描包路径
   swagger:
     base-package: "com.itkevin"
     enabled: true
-
 
 # 加载所有的端点/默认只加载了 info / health
 management:
@@ -59,4 +58,8 @@ info:
   author: "kevin"
   version: "@project.version@"
 
-
+# Mybatis配置
+mybatis:
+  typeAliasesPackage: com.koolearn
+  mapperLocations: classpath:mapper/*.xml
+  configuration.mapUnderscoreToCamelCase: true
