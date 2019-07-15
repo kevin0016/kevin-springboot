@@ -3,7 +3,7 @@ package com.itkevin.springbootdemo;
 import com.battcn.swagger.annotation.EnableSwagger2Doc;
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
-import org.mybatis.spring.annotation.MapperScan;
+//import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -30,7 +30,7 @@ import java.util.Arrays;
 @SpringBootApplication
 @EnableAdminServer
 @EnableSwagger2Doc
-@MapperScan(basePackages = "com.koolearn")
+//@MapperScan(basePackages = "com.koolearn")
 public class SpringbootDemoApplication {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);
